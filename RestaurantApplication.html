@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="Restaurant.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="Restaurant.js">
+
+    </script>
+</head>
+
+<body onload="load()">
+    <div id="wrapper">
+        <div id="table-container">
+            <div>Tables</div>
+            <div class="search-container">
+                <input id="table-search" oninput="searchTables()" placeholder="Search table">
+                <!-- <ul>
+
+                </ul> -->
+            </div>
+        </div>
+        <div id="menu-container">
+            <div>Menu</div>
+            <div class="search-container">
+                <input id="menu-search" oninput="searchMenu()" placeholder="Search menu... by course, by food">
+            </div>
+        </div>
+    </div>
+    <div id="order-details-wrapper">
+        <div id="order-details">
+            <div class="display-flex">
+                <div id="order-title"></div>
+                <div onclick="closeOrderDetails()"><i class="material-icons">close</i></div>
+            </div>
+            <table id="order-table">
+                <tr>
+                    <th>S.No</th>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </table>
+            <div id="total"></div>
+            <div id="footer">
+                <button>Close Session (Generate Bill)</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
