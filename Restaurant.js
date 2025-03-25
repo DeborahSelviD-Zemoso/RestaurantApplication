@@ -17,9 +17,7 @@ const allowDrop = (event) => {
 }
 
 const findTable = (tableId) => {
-    return new Promise(function (resolve) {
-        resolve(tables.find(table => table.id == tableId))
-    });
+    return Promise.resolve(tables.find(table => table.id == tableId));
 }
 
 const displayTable = (tables) => {
@@ -36,9 +34,7 @@ const clearTable = () => {
     let tableContainer = document.getElementById("table-container");
     let tableListElement = tableContainer.getElementsByTagName("ul");
     tableListElement[0].remove();
-    return new Promise(function (resolve) {
-        resolve(true);
-    });
+    return Promise.resolve(true);
 }
 
 const addItemIntoTable = async (menuId, tableId) => {
@@ -63,9 +59,7 @@ const addItemIntoTable = async (menuId, tableId) => {
 }
 
 const getId = (data, startIndex) => {
-    return new Promise(function (resolve) {
-        resolve(data.substring(startIndex, data.length));
-    });
+    return Promise.resolve(data.substring(startIndex, data.length));
 }
 
 const deleteItem = (index) => {
@@ -147,7 +141,6 @@ const showOrderDetails = (event) => {
             table.items.forEach((item, index) => {
                 tableElement.append(createOrderData(item, index + 1));
             });
-            // setTotalPrice(table.totalPrice);
         })
         .then(table => calculateTotalPrice(selectedTable))
         .then(sum => {

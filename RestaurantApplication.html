@@ -1,6 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
 
 <head>
+    <title>Restaurant Application</title>
     <link rel="stylesheet" type="text/css" href="Restaurant.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -15,9 +17,6 @@
             <div>Tables</div>
             <div class="search-container">
                 <input id="table-search" oninput="searchTables()" placeholder="Search table">
-                <!-- <ul>
-
-                </ul> -->
             </div>
         </div>
         <div id="menu-container">
@@ -31,7 +30,7 @@
         <div id="order-details">
             <div class="display-flex">
                 <div id="order-title"></div>
-                <div onclick="closeOrderDetails()"><i class="material-icons">close</i></div>
+                <button onclick="closeOrderDetails()"><i class="material-icons">close</i></button>
             </div>
             <table id="order-table">
                 <tr>
